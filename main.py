@@ -12,6 +12,7 @@ print (df)
 print ('Removing rows whose StockCode or Invoice values contain non-digit characters')
 
 # Checking values
-result = df[df.StockCode.apply(lambda x: x.isnumeric())& df.Invoice.apply(lambda x: x.isnumeric())]
+numeric = df[df.StockCode.apply(lambda x: x.isnumeric())& df.Invoice.apply(lambda x: x.isnumeric())]
+
 # Display result
-print("Result:\n",result)
+print("Result:\n",numeric)
